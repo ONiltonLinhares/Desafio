@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css'; // Importando o arquivo CSS
-import Extrato from './components/extrato';
+import Extrato from './components/Extrato';
 
 interface Conta {
   id: number;
@@ -162,6 +162,8 @@ const App: React.FC = () => {
       <header>
         Sistema de Caixa
       </header>
+
+      <h2>Contas</h2>
       <div className="contas-container-wrapper">
         <div className="contas-container">
           {contas.length > 0 ? (
@@ -170,7 +172,6 @@ const App: React.FC = () => {
                 <strong>Nome:</strong> {conta.nome} <br />
                 <strong>Saldo:</strong> R${conta.saldo.toFixed(2)} <br />
                 <strong>Tipo:</strong> {conta.tipo} <br />
-                <strong>Status:</strong> {conta.ativo ? "Ativa" : "Desativada"} <br />
               </div>
             ))
           ) : (
@@ -178,12 +179,14 @@ const App: React.FC = () => {
           )}
         </div>
       </div>
+
+      <h2>Ações</h2>
       <div className="acoes-container-wrapper">
         {/* Card de Criar Conta */}
         <div className="acao-card">
           <h3>Criar Conta</h3>
           <label>
-            Nome:
+            <strong>Nome:</strong>
             <input
               type="text"
               value={nome}
@@ -191,7 +194,7 @@ const App: React.FC = () => {
             />
           </label>
           <label>
-            Saldo:
+          <strong>Saldo:</strong>
             <input
               type="number"
               value={saldo}
@@ -199,7 +202,7 @@ const App: React.FC = () => {
             />
           </label>
           <label>
-            Tipo:
+          <strong>Tipo:</strong>
             <select
               value={tipo}
               onChange={(e) => setTipo(e.target.value)}
@@ -209,14 +212,14 @@ const App: React.FC = () => {
               <option value="corrente">Corrente</option>
             </select>
           </label>
-          <button onClick={criarConta}>Criar Conta</button>
+          <button onClick={criarConta}><strong>Criar conta</strong></button>
         </div>
 
         {/* Card de Registrar Depósito */}
         <div className="acao-card">
           <h3>Registrar Depósito</h3>
           <label>
-            Conta:
+            <strong>Conta:</strong>
             <select
               value={contaDestinoDeposito || ""}
               onChange={(e) => setContaDestinoDeposito(Number(e.target.value))}
@@ -232,7 +235,7 @@ const App: React.FC = () => {
             </select>
           </label>
           <label>
-            Valor:
+          <strong>Valor:</strong>
             <input
               type="number"
               value={valorDeposito}
@@ -240,7 +243,7 @@ const App: React.FC = () => {
             />
           </label>
           <label>
-            Observação:
+          <strong>Observação:</strong>
             <input
               type="text"
               value={observacaoDeposito}
@@ -248,7 +251,7 @@ const App: React.FC = () => {
             />
           </label>
           <button onClick={() => registrarTransacao('deposito', null, contaDestinoDeposito, valorDeposito, observacaoDeposito)}>
-            Registrar Depósito
+          <strong>Registrar Depósito:</strong>
           </button>
         </div>
 
@@ -256,7 +259,7 @@ const App: React.FC = () => {
         <div className="acao-card">
           <h3>Registrar Saque</h3>
           <label>
-            Conta:
+            <strong>Conta:</strong>
             <select
               value={contaSaque || ""}
               onChange={(e) => setContaSaque(Number(e.target.value))}
@@ -272,7 +275,7 @@ const App: React.FC = () => {
             </select>
           </label>
           <label>
-            Valor:
+          <strong>Valor:</strong>
             <input
               type="number"
               value={valorSaque}
@@ -280,7 +283,7 @@ const App: React.FC = () => {
             />
           </label>
           <label>
-            Observação:
+          <strong>Observação:</strong>
             <input
               type="text"
               value={observacaoSaque}
@@ -288,7 +291,7 @@ const App: React.FC = () => {
             />
           </label>
           <button onClick={() => registrarTransacao('saque', contaSaque, null, valorSaque, observacaoSaque)}>
-            Registrar Saque
+          <strong>Registrar Saque:</strong>
           </button>
         </div>
 
@@ -296,7 +299,7 @@ const App: React.FC = () => {
         <div className="acao-card">
           <h3>Transferir entre Contas</h3>
           <label>
-            Conta de Origem:
+          <strong>Conta de Origem:</strong>
             <select
               value={contaOrigemTransferencia || ""}
               onChange={(e) => setContaOrigemTransferencia(Number(e.target.value))}
@@ -312,7 +315,7 @@ const App: React.FC = () => {
             </select>
           </label>
           <label>
-            Conta de Destino:
+          <strong>Conta de Destino:</strong>
             <select
               value={contaDestinoTransferencia || ""}
               onChange={(e) => setContaDestinoTransferencia(Number(e.target.value))}
@@ -328,7 +331,7 @@ const App: React.FC = () => {
             </select>
           </label>
           <label>
-            Valor:
+            <strong>Valor:</strong>
             <input
               type="number"
               value={valorTransferencia}
@@ -336,7 +339,7 @@ const App: React.FC = () => {
             />
           </label>
           <label>
-            Observação:
+            <strong>Observação:</strong>
             <input
               type="text"
               value={observacaoTransferencia}
@@ -344,7 +347,7 @@ const App: React.FC = () => {
             />
           </label>
           <button onClick={() => registrarTransacao('transferencia', contaOrigemTransferencia, contaDestinoTransferencia, valorTransferencia, observacaoTransferencia)}>
-            Transferir
+            <strong>Transferir</strong>
           </button>
         </div>
 
@@ -352,7 +355,7 @@ const App: React.FC = () => {
         <div className="acao-card">
           <h3>Desativar Conta</h3>
           <label>
-            Conta:
+            <strong>Conta:</strong>
             <select
               value={contaDesativar || ""}
               onChange={(e) => setContaDesativar(Number(e.target.value))}
@@ -367,13 +370,12 @@ const App: React.FC = () => {
                 ))}
             </select>
           </label>
-          <button onClick={desativarConta}>Desativar Conta</button>
+          <button onClick={desativarConta}><strong>Desativar Conta</strong></button>
         </div>
       </div>
 
-      <div className='teste'>
-       <Extrato contas={contas} />
-      </div>
+      <h2>Extrato</h2>
+      <Extrato contas={contas} />
     </div>
   );
 };

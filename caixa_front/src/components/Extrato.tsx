@@ -24,6 +24,11 @@ interface ExtratoResponse {
   transacoes: Transacao[];
 }
 
+const obterNomeConta = (id: number | null, contas: Conta[]): string => {
+  const conta = contas.find((c) => c.id === id);
+  return conta ? conta.nome : '-';
+};
+
 const Extrato = ({ contas }: { contas: Conta[] }) => {
   const [contaSelecionada, setContaSelecionada] = useState<Conta | null>(null);
   const [extrato, setExtrato] = useState<ExtratoResponse | null>(null);
@@ -46,7 +51,8 @@ const Extrato = ({ contas }: { contas: Conta[] }) => {
   }, [contaSelecionada]);
 
   return (
-    <div className="extrato">
+    <div className="extrato-container-wrapper">
+      
       {/* Dropdown para selecionar a conta */}
       <select className='select-conta'
         value={contaSelecionada?.id || ''}
@@ -65,20 +71,9 @@ const Extrato = ({ contas }: { contas: Conta[] }) => {
         ))}
       </select>
 
-      {/* Exibe as informações da conta selecionada */}
-      {contaSelecionada && (
-        <div className="conta-info">
-          <h3>Informações da Conta</h3>
-          <p><strong>Nome:</strong> {contaSelecionada.nome}</p>
-          <p><strong>Saldo:</strong> R$ {contaSelecionada.saldo}</p>
-          <p><strong>Tipo:</strong> {contaSelecionada.tipo}</p>
-        </div>
-      )}
-
       {/* Exibe o extrato da conta */}
       {extrato && (
         <div className="extrato-info">
-          <h3>Extrato da Conta</h3>
           <table>
             <thead>
               <tr>
@@ -96,8 +91,8 @@ const Extrato = ({ contas }: { contas: Conta[] }) => {
                   <td>{new Date(transacao.dataTransacao).toLocaleString()}</td>
                   <td>{transacao.tipoTransacao}</td>
                   <td>R$ {transacao.valor}</td>
-                  <td>{transacao.contaOrigem || '-'}</td>
-                  <td>{transacao.contaDestino || '-'}</td>
+                  <td>{obterNomeConta(transacao.contaOrigem, contas) || '-'}</td>
+                  <td>{obterNomeConta(transacao.contaDestino, contas) || '-'}</td>
                   <td>{transacao.observacao}</td>
                 </tr>
               ))}

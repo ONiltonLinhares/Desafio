@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "axios": "^1.7.7",
+    "caixa_front": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
