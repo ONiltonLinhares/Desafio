@@ -1,0 +1,123 @@
+/* Estilo para a página */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* Fundo levemente cinza */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  height:125vh;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Para permitir a posição do card criar conta */
+}
+
+.contas-container-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto; /* Rolagem lateral */
+}
+
+.contas-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.conta-card {
+  background-color: white;
+  color: #45a049;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  min-width: 250px; /* Tamanho mínimo para os cartões */
+  max-width: 300px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.conta-card strong {
+  color: #333;
+}
+
+header{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  color: #333;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  border-radius: 5px;
+}
+
+.acoes-container-wrapper{
+  height: 32%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.acao-card{
+  font-size: small;
+  background-color: white;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  padding: 10px;
+  margin-right: 1%;
+}
+
+.teste {
+  height: 30%;
+  width: 100%;
+  color: white;
+  background-color: white;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  border-radius: 5px;
+}
+
+.extrato-container-wrapper {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.teste select {
+  height: 5vh;
+  width: 20%;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  border-radius: 5px;
+}
+
+.conta-info{
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  border-radius: 5px;
+  height: 30vh;
+}
+
+.extrato-info{
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  border-radius: 5px;
+  height: 30vh;
+}
