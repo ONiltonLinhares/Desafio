@@ -30,6 +30,12 @@ Siga os passos abaixo para executar o projeto localmente:
     ```bash
     docker-compose up -d
     ```
+    **Obs:** para cirar os containers do docker é preciso que as portas configuradas no **Docker-compose** estejam disponíveis 
+    - Banco: 5432
+    - API: 8080
+
+    Caso necessario, alterar portas no arquivo **Docker-compose**.
+    
 4. Navegue até o diretório do frontend:
     ```bash
     cd caixa_front
