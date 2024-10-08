@@ -43,7 +43,7 @@ Siga os passos abaixo para executar o projeto localmente:
     npm run dev
     ```
 
-Após a execução desses comandos, será exibido no terminal o endereço (URL) onde a aplicação está hospedada, geralmente algo como `http://localhost:3000`.
+Após a execução desses comandos, será exibido no terminal o endereço (URL) onde a aplicação está hospedada, geralmente algo como `http://localhost:5173`.
 
 ## Banco de Dados
 
