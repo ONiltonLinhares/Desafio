@@ -1,0 +1,9 @@
+com\example\caixa\domain\contas\ContasRepository.class
+com\example\caixa\CaixaApplication.class
+com\example\caixa\controllers\ContasController.class
+com\example\caixa\domain\contas\Contas.class
+com\example\caixa\domain\transacoes\Transacoes.class
+com\example\caixa\domain\transacoes\RequestTransacoesDTO.class
+com\example\caixa\domain\contas\RequestContasDTO.class
+com\example\caixa\domain\transacoes\TransacoesRepository.class
+com\example\caixa\controllers\TransacoesController.class
