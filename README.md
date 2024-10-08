@@ -6,7 +6,7 @@ Este é um projeto fullstack de um **sistema de caixa bancário**, desenvolvido 
 
 O projeto contém dois diretórios principais:
 
-- **caixa_api**: Contém a API desenvolvida com Spring Boot.
+- **caixa**: Contém a API desenvolvida com Spring Boot.
 - **caixa_front**: Contém a interface web desenvolvida com React.
 
 No diretório raiz, também há um arquivo `docker-compose.yml`, que é utilizado para inicializar o banco de dados e a API dentro de containers Docker.
