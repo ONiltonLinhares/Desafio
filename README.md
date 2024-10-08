@@ -22,6 +22,13 @@ Além disso, é necessário garantir que o Docker esteja em execução na sua m�
 
 ## Executando o Projeto
 
+### Execução simplificada
+Caso já tenha os requisitos atendidos na sua **máquina** e esteja rodando em um ambiente **Windows** com o **PowerShell**, você pode utilizar os arquivos `.bat` no diretório para executar o projeto:
+1. Execute o arquivo: `preparar_ambiente.bat`
+2. Execute o arquivo: `rodar_aplicacao.bat`
+3. Abra o navegador e acesse o endereço em que a **aplicação** está rodando (será exibido na tela do terminal).
+
+### Execução Padrão
 Siga os passos abaixo para executar o projeto localmente:
 
 1. Clone este repositório ou faça o download do diretório principal.
