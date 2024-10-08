@@ -18,7 +18,8 @@ Antes de executar o projeto, certifique-se de ter as seguintes ferramentas insta
 - [Docker](https://www.docker.com/get-started) (com Docker Compose habilitado)
 - [Node.js](https://nodejs.org/) (com `npm` disponível no PATH)
 - Executar em ambiente [windows]
-  **OBS:** O projeto funciona também em ambiente mac ou linux, mas as intruções de execução são todas referentes ao windows, executar no mac ou linux pode necessitar de adaptações no processo de execução.
+
+**OBS:** O projeto funciona também em ambiente mac ou linux, mas as intruções de execução são todas referentes ao windows, executar no mac ou linux pode necessitar de adaptações no processo de execução.
 
 Além disso, é necessário garantir que o Docker esteja em execução na sua máquina.
 
