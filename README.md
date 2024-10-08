@@ -17,6 +17,7 @@ Antes de executar o projeto, certifique-se de ter as seguintes ferramentas insta
 
 - [Docker](https://www.docker.com/get-started) (com Docker Compose habilitado)
 - [Node.js](https://nodejs.org/) (com `npm` disponível no PATH)
+- Executar em ambiente windows (O projeto funciona também em ambiente mac ou linux, mas as intruções de execução são todas referentes ao windows, executar no mac ou linux pode necessitar de adaptações no processo de execução)
 
 Além disso, é necessário garantir que o Docker esteja em execução na sua máquina.
 
@@ -32,7 +33,7 @@ Caso já tenha os requisitos atendidos na sua **máquina** e esteja rodando em u
 Siga os passos abaixo para executar o projeto localmente:
 
 1. Clone este repositório ou faça o download do diretório principal.
-2. No diretório raiz do projeto, abra o terminal (ou PowerShell no Windows).
+2. No diretório raiz do projeto, abra o terminal (PowerShell no Windows).
 3. Execute o comando abaixo para iniciar o banco de dados e a API dentro de containers Docker:
     ```bash
     docker-compose up -d
